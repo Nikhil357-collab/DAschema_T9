@@ -1,0 +1,26 @@
+                dim_customer
+                -------------
+                customer_id (PK)
+                customer_name
+                       |
+                       |
+dim_product ---- fact_sales ---- dim_region
+-------------   ------------   -------------
+product_id(PK)  sales_id (PK)  region_id (PK)
+product_name    customer_id FK region
+category        product_id FK  country
+sub_category    region_id FK   state
+                date_id FK     city
+                sales
+                quantity
+                discount 
+                profit
+                       |
+                       |
+                    dim_date
+                    ----------
+                    date_id (PK)
+                    order_date
+                    year
+                    month
+                    quarter
